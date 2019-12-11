@@ -1,0 +1,29 @@
+Grovy based scripts to create a job
+
+https://github.com/wardviaene/jenkins-course/blob/master/job-dsl/nodejs.groovy
+
+Manage Plugins-Job dsl Plugins
+ 
+ Create project--Name it--Configure git repo(https://github.com/wardviaene/jenkins-course)
+
+ And in build--job dsl--and file path(job-dsl/nodejs.groovy)
+
+ To approve script
+
+ Manage jenkins--In-process script approvals
+
+
+ -----------------------------------------------------------------------------------------
+
+ Nodejs-docker Groovy
+
+ Make edits to the seed project created above
+
+ Add job-dsl/nodejsdocker.groovy to the dsl scripts
+
+ Set credentials of docker hub
+
+ Allow in built script access
+
+ It should create job which an be run independently
+

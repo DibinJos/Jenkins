@@ -1,0 +1,51 @@
+wget https://raw.githubusercontent.com/wardviaene/jenkins-course/master/scripts/install_jenkins.sh
+
+http://10.0.0.11:8080
+
+Password at : cat /var/jenkins_home/secrets/initialAdminPassword------>df7b5ac85ba744a1b253f78fbfc1ec7b
+
+------------------------------------------------------------------------------------------------------
+To run a nodeJS project
+
+Git : https://github.com/wardviaene/docker-demo.git
+
+Manage Jenkin---Manage Plugings---Avaialble--NodeJS---Download and restart
+
+Create a project/job
+
+Add git path and bash command
+
+To set NodeJS
+
+Mnaage Jenkins--Global Configuration--NodeJS--And add it to the job as well using provide node and npm path
+
+-----------------------------------------------------------------------------------------------------
+
+
+To run docker container project from within jenkins
+
+As the jenkins itself is running on docker , we have to provid access the running docker to create and manage docker within
+
+For the build the image from :  https://github.com/wardviaene/jenkins-docker/blob/master/Dockerfile
+
+docker image build -t jenkins-docker .
+
+Stop old and run new container
+sudo docker container run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.socl:/var/run/docker.sock --name jenkins -d jenkins-docker
+
+And in jenkins portal add cloudbees docker Plugings
+
+Have all the inputs same in simple nodeJS npm install
+
+In build use docker build and publish and add the repo from hub(already created) to repo 
+
+Use default in docker URL (click on ? mark)
+
+Add registry username and password with docker hub cred
+
+Run the job,it creats a job in th local and push it to the hub
+
+to run the image- docker container run -p 3000:3000 -d dibin123/dfsdf-dfs-fsd
+
+
+ 

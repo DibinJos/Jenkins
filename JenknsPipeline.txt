@@ -1,0 +1,11 @@
+It is a type of job(unlike DSL which is used to create jobs) created using jenkins UI or even Jenkins DSL
+
+https://github.com/wardviaene/docker-demo/blob/master/misc/Jenkinsfile
+
+Node are diff type.
+
+Divide into coneptual stages
+
+In the above file we get commit id and store in .git
+We get the commit id to tag the rep in docker hub when pushing
+
